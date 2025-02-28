@@ -173,7 +173,7 @@ npm run dev
 ---
 
 ## 🔥 Postman Collection
-- 📌 **[Download Postman Collection](#)**
+- 📌 **[Download Postman Collection](https://github.com/myselfshivams/image-processing-system/blob/main/image-processing-api.postman_collection.json)**
 
 ---
 
