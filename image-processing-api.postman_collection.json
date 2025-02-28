@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "eed25a8a-7fe4-446f-a45d-98e5abb18d0b",
+		"name": "image-processing-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39405112"
+	},
+	"item": [
+		{
+			"name": "Upload CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/shivam/Documents/GitHub/image-processing-system/test.csv"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/status/{request_id}"
+			},
+			"response": []
+		},
+		{
+			"name": "Check Worker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/worker"
+			},
+			"response": []
+		}
+	]
+}
