@@ -13,7 +13,6 @@ export const config = {
 
 const parseCSV = (filePath) => {
   return new Promise((resolve, reject) => {
-    const records = [];
     fs.readFile(filePath, 'utf8')
       .then((data) => {
         parse(data, { columns: true, trim: true }, (err, output) => {
@@ -33,7 +32,7 @@ export default async function handler(req, res) {
   const form = new IncomingForm(); 
 
   try {
-    const [fields, files] = await form.parse(req);
+    const [, files] = await form.parse(req);
     
     if (!files.file || files.file.length === 0) {
       return res.status(400).json({ error: 'CSV file is required' });
